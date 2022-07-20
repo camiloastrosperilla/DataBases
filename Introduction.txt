@@ -1,0 +1,19 @@
+## Apache Cassandra is a Distributed, No SQL DataBase.
+## Cassandra Supports most traditional SQL datases.
+## First Example
+## There are two main components in Cassandra: Apache Cassandra and Cassandra Query Language.
+
+## A brief introduction to Cassandra.
+
+	Keystone = Namespace; that defines data replication.
+
+	1. #apache-cassandra-3.11.6/bin/cqlsh
+	2. cqlsh> CREATE KEYSTONE demo WITH replication =j {'class':'SimpleStrategy', 'replication_factor': 1};
+
+	3. cqlsh> USE demo;
+	4. cqlsh:demo> CREATE TABLE users (ID int PRIMARY KEY, NAme text, Department text, ExpenseCode int);
+	5. cqlsh:demo> DESCRIBE users;
+	6. cqlsh:demo> INSERT INTO users (ID, Name, Department, ExpenseCode) values (0, 'David', 'Engineering', 200);
+	7. cqlsh:demo> SELECT * from users;
+	
+	
